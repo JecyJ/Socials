@@ -10,7 +10,7 @@ const facebookRouter = (connection) => {
     try {
       const appId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID;
       const appSecret = process.env.NEXT_PUBLIC_FACEBOOK_APP_SECRET;
-      const redirectUri = 'http://localhost:3000/auth/facebook/callback'; // Replace with your callback URL
+      const redirectUri = 'http://localhost:3000/api/auth/facebook/callback'; // Replace with your callback URL
 
       // Exchange code for access token
       const tokenResponse = await fetch(`https://graph.facebook.com/v18.0/oauth/access_token?client_id=${appId}&redirect_uri=${redirectUri}&client_secret=${appSecret}&code=${code}`);

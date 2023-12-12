@@ -9,7 +9,7 @@ const Home = () => {
   const handleSaveClick = async () => {
     try {
       // Replace 'your_facebook_redirect_uri' with your Facebook callback URL
-      const response = await fetch(`/auth/facebook/callback?code=${username}`, {
+      const response = await fetch(`/api/auth/facebook/callback?code=${username}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'

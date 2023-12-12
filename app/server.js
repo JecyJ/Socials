@@ -26,7 +26,7 @@ connection.connect((err) => {
 app.use(express.json());
 
 // Endpoint for handling user login and fetching/saving Facebook stats
-app.use('/auth/facebook', facebookRouter(connection));
+app.use('/api/auth/facebook', facebookRouter(connection));
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
